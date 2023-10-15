@@ -1,0 +1,39 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "description": "Access Claude AI chat through Opera Sidebar. This is an UNOFFICIAL extensions.",
+   "developer": {
+      "name": "kishor Jena"
+   },
+   "icons": {
+      "16": "icons/claude16.png",
+      "19": "icons/claude19.png",
+      "38": "icons/claude38.png",
+      "48": "icons/claude48.png",
+      "128": "icons/claude128.png"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "inject/fallback.js", "inject/index.js" ],
+      "match_about_blank": true,
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "manifest_version": 2,
+   "name": "Claude AI Sidebar",
+   "permissions": [ "webRequest", "webRequestBlocking", "\u003Call_urls>" ],
+   "sidebar_action": {
+      "default_icon": {
+         "16": "icons/claude16.png",
+         "19": "icons/claude19.png",
+         "38": "icons/claude38.png",
+         "48": "icons/claude48.png",
+         "128": "icons/claude128.png"
+      },
+      "default_panel": "sidebar.html",
+      "default_title": "Claude AI Sidebar"
+   },
+   "update_url": "https://extension-updates.opera.com/api/omaha/update/",
+   "version": "1.0"
+}
